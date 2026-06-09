@@ -195,7 +195,7 @@ h2 em{font-style:italic;color:var(--brown)}
 
 /* ── WHY SECTION ── */
 #why{background:var(--white)}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-grid{display:block;max-width:800px}
 .why-img-wrap{position:relative;border-radius:20px;overflow:hidden}
 .why-img-wrap img{width:100%;height:600px;object-fit:cover;display:block}
 .why-img-badge{
@@ -488,8 +488,7 @@ footer{
   .trust-item svg{width:16px;height:16px}
 
   /* Why */
-  #why .why-img-wrap{display:block;margin-bottom:24px}
-  .why-img-wrap img{height:400px}
+  #why .why-img-wrap{display:none}
   .why-point{gap:12px;padding:14px 0}
   .wp-icon{width:36px;height:36px;border-radius:8px}
 
@@ -666,13 +665,6 @@ footer{
 <section id="why">
   <div class="container">
     <div class="why-grid">
-      <div class="why-img-wrap reveal">
-        <img src="why.png" alt="Family discussing home purchase" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('img-fallback-family')"/>
-        <div class="why-img-badge">
-          <strong>"We told a client not to buy. They thanked us six months later."</strong>
-          <span>Our only job is your best decision — even if that's walking away.</span>
-        </div>
-      </div>
       <div>
         <p class="s-label reveal">Why This Matters</p>
         <h2 class="reveal">A home is a 20-year<br>financial <em>commitment.</em></h2>
