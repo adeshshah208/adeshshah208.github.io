@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>AI Housing Consultancy</title>
 <meta name="description" content="Independent first-home advisory in Mumbai. One private consultation. No commissions on the advice you get. Know what your home really costs before you sign.">
@@ -72,10 +73,10 @@
 
   /* HERO — Variant A: Crisp Split (refined) */
   .hero{display:flex;flex-direction:column;background:#241A0F;overflow:hidden;position:relative;}
-  .hero-photo{position:relative;width:100%;height:38svh;min-height:260px;flex:none;}
-  .hero-img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;display:block;filter:saturate(1.04) contrast(1.05) brightness(.97);}
-  .hero-photo::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(36,26,15,0) 0%,rgba(36,26,15,0) 55%,rgba(36,26,15,.35) 75%,rgba(36,26,15,.75) 90%,rgba(36,26,15,1) 100%);}
-  .hero-panel{background:#241A0F;padding:clamp(30px,7vw,52px) 0 clamp(40px,10vw,62px);}
+  .hero-photo{position:relative;width:100%;height:38svh;min-height:260px;flex:none;overflow:hidden;margin-bottom:-1px;}
+  .hero-img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;display:block;filter:saturate(1.04) contrast(1.05) brightness(.97);transform-origin:50% 45%;will-change:transform;animation:kenburns 24s ease-in-out infinite alternate;}
+  .hero-photo::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;background:linear-gradient(to bottom,rgba(36,26,15,0) 0%,rgba(36,26,15,0) 55%,rgba(36,26,15,.35) 75%,rgba(36,26,15,.75) 90%,rgba(36,26,15,1) 100%);}
+  .hero-panel{background:#241A0F;padding:clamp(30px,7vw,52px) 0 clamp(40px,10vw,62px);position:relative;z-index:3;margin-top:-1px;}
   .hero .eyebrow{color:var(--gold);margin-bottom:18px;}
   .hero .display{color:#F3EADB;font-size:clamp(1.7rem,6.2vw,2.6rem);line-height:1.15;letter-spacing:-.01em;max-width:16ch;}
   .hero .display em{font-style:normal;font-weight:500;color:var(--gold);}
@@ -90,10 +91,10 @@
   .btn--gold .arr{margin-left:3px;}
   @media(min-width:820px){
     .hero{flex-direction:row;min-height:88vh;align-items:stretch;}
-    .hero-photo{order:2;width:52%;height:auto;}
+    .hero-photo{order:2;width:52%;height:auto;margin-bottom:0;margin-left:-1px;}
     .hero-img{object-position:60% 38%;}
     .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(36,26,15,1) 0%,rgba(36,26,15,.85) 5%,rgba(36,26,15,0) 22%);}
-    .hero-panel{order:1;width:48%;display:flex;align-items:center;padding-block:0;}
+    .hero-panel{order:1;width:48%;display:flex;align-items:center;padding-block:0;margin-top:0;}
     .hero .display{font-size:clamp(2.1rem,3.3vw,2.9rem);max-width:14ch;}
     .hero .lede{font-size:1.02rem;}
   }
@@ -285,6 +286,31 @@
     .reveal{position:sticky;top:78px;}
   }
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
+  /* ===== motion: entrance, scroll reveal, ambient ===== */
+  @keyframes heroIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  @keyframes kenburns{from{transform:scale(1.045)}to{transform:scale(1.11)}}
+  .hero-panel .container>*{animation:heroIn .85s cubic-bezier(.2,.72,.24,1) both;}
+  .hero-panel .container>*:nth-child(1){animation-delay:.14s}
+  .hero-panel .container>*:nth-child(2){animation-delay:.24s}
+  .hero-panel .container>*:nth-child(3){animation-delay:.36s}
+  .hero-panel .container>*:nth-child(4){animation-delay:.46s}
+  .hero-panel .container>*:nth-child(5){animation-delay:.56s}
+  .hero-panel .container>*:nth-child(6){animation-delay:.66s}
+  .hero-panel .container>*:nth-child(7){animation-delay:.74s}
+  .js .sec>.container>.eyebrow,.js .sec>.container>.display,.js .sec>.container>.body-txt,.js .sec>.container>.lede,
+  .js .walkaway,.js .price-tag,.js .second-op,.js .sample-note,
+  .js .truth-row,.js .pillar,.js .lens,.js .scenario,.js .faq details,.js .quote{
+    opacity:0;transform:translateY(22px);
+    transition:opacity .72s cubic-bezier(.2,.72,.24,1),transform .72s cubic-bezier(.2,.72,.24,1);
+  }
+  .js .grid{opacity:0;transition:opacity .9s ease;}
+  .av-in{opacity:1 !important;transform:none !important;}
+  .topbar{transition:box-shadow .25s ease,background .25s ease;}
+  .topbar.scrolled{box-shadow:0 8px 24px -16px rgba(70,58,41,.5);background:rgba(244,237,226,.93);}
+  @media(prefers-reduced-motion:reduce){
+    .hero-panel .container>*{animation:none !important;opacity:1 !important;transform:none !important;}
+    .hero-img{animation:none !important;transform:none !important;}
+  }
 </style>
 </head>
 <body>
@@ -611,6 +637,32 @@
 
   el.downAmtLbl.textContent='Loan: '+inr(state.price-state.price*state.down/100);
   render();
+})();
+</script>
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var groupSel='.truth-list,.pillars,.lenses,.scenarios,.faq,.quotes';
+  var singles=document.querySelectorAll('.sec>.container>.eyebrow,.sec>.container>.display,.sec>.container>.body-txt,.sec>.container>.lede,.walkaway,.price-tag,.second-op,.sample-note,.grid');
+  var groups=document.querySelectorAll(groupSel);
+  function revealGroup(g){var k=g.children,i;for(i=0;i<k.length;i++){k[i].style.transitionDelay=(i*70)+'ms';k[i].classList.add('av-in');}}
+  if(reduce || !('IntersectionObserver' in window)){
+    [].forEach.call(singles,function(e){e.classList.add('av-in');});
+    [].forEach.call(groups,function(g){[].forEach.call(g.children,function(c){c.classList.add('av-in');});});
+  }else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var t=en.target;
+        if(t.matches(groupSel)){revealGroup(t);}else{t.classList.add('av-in');}
+        io.unobserve(t);
+      });
+    },{rootMargin:'0px 0px -9% 0px',threshold:0.08});
+    [].forEach.call(singles,function(e){io.observe(e);});
+    [].forEach.call(groups,function(g){io.observe(g);});
+  }
+  var tb=document.querySelector('.topbar');
+  if(tb){var onScroll=function(){tb.classList.toggle('scrolled',window.scrollY>12);};onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
 })();
 </script>
 </body>
