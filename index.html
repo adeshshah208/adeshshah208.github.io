@@ -151,7 +151,7 @@ h3{font-family:var(--sans);font-weight:700;font-size:clamp(1.08rem,2.5vw,1.3rem)
 .cred .big{font-family:var(--serif);font-size:clamp(3.4rem,12vw,6rem);line-height:.9;color:var(--ink);font-weight:400;letter-spacing:-.03em}
 .cred .big .gt{font-weight:500}
 .cred .cap{margin-top:14px;font-size:clamp(1.05rem,2.4vw,1.28rem);color:var(--ink-soft);max-width:34ch;margin-left:auto;margin-right:auto;line-height:1.4}
-.cred-pts{margin-top:42px;display:grid;grid-template-columns:repeat(2,auto);justify-content:center;gap:14px 12px}
+.cred-pts{margin-top:42px;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 12px}
 .cred-pt{display:inline-flex;align-items:center;gap:9px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:.6em 1.15em;font-size:.92rem;font-weight:600;color:var(--ink)}
 .cred-pt .d{width:6px;height:6px;border-radius:50%;background:var(--terra);flex:none}
 
@@ -351,14 +351,9 @@ fbq("track","PageView");
     <div class="cred">
       <div class="big" data-rise><span class="gt">1,000+</span></div>
       <p class="cap" data-rise>first-home buyers guided to a decision they actually understood.</p>
-      <div class="cred-pts" data-stagger>
-        <span class="cred-pt"><span class="d"></span>Clarity, not pressure</span>
-        <span class="cred-pt"><span class="d"></span>Private, one to one</span>
-        <span class="cred-pt"><span class="d"></span>Tailored to your life</span>
-        <span class="cred-pt"><span class="d"></span>No commission, ever</span>
-      </div>
+
       <div class="section-cta" style="margin-top:44px" data-rise>
-        <span class="cta-glow"><a class="cta cta--lg" onclick="fbq('track','Lead')" href="consult.html"><span class="l">Click here to save your lakhs</span><span class="arr">→</span></a></span>
+        <span class="cta-glow"><a class="cta cta--lg" onclick="fbq('track','Lead')" href="consult.html"><span class="l">Don't lose lakhs. Talk to me first</span><span class="arr">→</span></a></span>
       </div>
     </div>
   </div>
