@@ -84,6 +84,16 @@ h3{font-family:var(--sans);font-weight:700;font-size:clamp(1.08rem,2.5vw,1.3rem)
 .section-cta{margin-top:40px;display:flex;justify-content:center}
 .paid-you-cta{display:inline-block;margin-top:18px;font-family:var(--sans);font-size:.88rem;font-weight:700;color:#FBF0E6;letter-spacing:.06em;text-transform:uppercase;border-bottom:1.5px solid rgba(251,240,230,.5);padding-bottom:4px;text-decoration:none;}
 .paid-you-cta:hover{border-bottom-color:#FBF0E6}
+
+/* SAVINGS SECTION */
+.savings-grid{display:grid;grid-template-columns:1fr;gap:0;margin-top:52px;border-top:1px solid var(--line)}
+@media(min-width:840px){.savings-grid{grid-template-columns:repeat(3,1fr);align-items:stretch}}
+.saving-card{padding:36px 28px 36px 28px;border-bottom:1px solid var(--line);display:flex;flex-direction:column}
+@media(min-width:840px){.saving-card{padding:40px 36px;border-bottom:0;border-right:1px solid var(--line)}.saving-card:last-child{border-right:0}.saving-card:first-child{padding-left:0}.saving-card:last-child{padding-right:0}}
+.saving-num{font-family:var(--serif);font-size:1.05rem;color:var(--terra);font-weight:500;letter-spacing:.04em;margin-bottom:18px;display:block}
+.saving-card h3{margin-bottom:14px;color:var(--ink)}
+.saving-card p{color:var(--ink-soft);font-size:.97rem;line-height:1.65;flex:1}
+.saving-card p strong{color:var(--ink);font-weight:700}
 /* section rhythm */
 .s{padding:clamp(64px,11vw,128px) 0;position:relative;z-index:2}
 .s,.hero{scroll-margin-top:80px}
@@ -242,6 +252,7 @@ fbq("track","PageView");
     <a class="mob-link" href="#role" onclick="document.getElementById('mobile-menu').classList.remove('open')">The Role</a>
     <a class="mob-link" href="#why" onclick="document.getElementById('mobile-menu').classList.remove('open')">Why This Exists</a>
     <a class="mob-link" href="#stakes" onclick="document.getElementById('mobile-menu').classList.remove('open')">What No Brochure Shows You</a>
+    <a class="mob-link" href="#savings" onclick="document.getElementById('mobile-menu').classList.remove('open')">How It Saves You Lakhs</a>
     <a class="mob-link" href="#offer" onclick="document.getElementById('mobile-menu').classList.remove('open')">Your Consultation</a>
   </nav>
   <span class="cta-glow" style="display:block;margin-top:20px"><a class="cta cta--lg" onclick="fbq('track','Lead');document.getElementById('mobile-menu').classList.remove('open')" href="consult.html"><span class="l">Book your consultation</span><span class="arr">→</span></a></span>
@@ -355,6 +366,41 @@ fbq("track","PageView");
       <div class="section-cta" style="margin-top:44px" data-rise>
         <span class="cta-glow"><a class="cta cta--lg" onclick="fbq('track','Lead')" href="consult.html"><span class="l">Don't lose lakhs. Talk to me first</span><span class="arr">→</span></a></span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT SAVES YOU LAKHS -->
+<section class="s bg-white" id="savings">
+  <div class="wrap">
+    <div class="s-head">
+      <span class="eyebrow" data-rise>Where your lakhs actually go</span>
+      <h2 class="serif" data-rise>Three places most first-time buyers lose money. And how I stop it.</h2>
+      <p class="lead" data-rise>The savings are not abstract. They come from three very specific moments in the home-buying process — and every one of them happens before you sign.</p>
+    </div>
+    <div class="savings-grid" data-stagger>
+
+      <div class="saving-card">
+        <div class="saving-num">01</div>
+        <h3>Negotiating with the developer</h3>
+        <p>Most buyers accept the quoted price. A guided buyer knows exactly what to push back on — price per sqft, car parking, amenities, possession timelines, penalty clauses, and the fine print no one flags. The difference on a single negotiation is often <strong>₹2–5 lakhs.</strong></p>
+      </div>
+
+      <div class="saving-card">
+        <div class="saving-num">02</div>
+        <h3>Structuring your loan correctly</h3>
+        <p>The wrong loan structure costs you silently for twenty years. Interest rate, tenure, prepayment terms, processing fees — small differences compound into lakhs. Most buyers take whatever the bank's agent offers. I make sure you don't. The right structure can save you <strong>₹3–8 lakhs</strong> over the life of the loan.</p>
+      </div>
+
+      <div class="saving-card">
+        <div class="saving-num">03</div>
+        <h3>Making the right decision</h3>
+        <p>Buying the wrong flat is the most expensive mistake of all. Wrong builder, wrong location, wrong stage of construction, wrong legal standing. One honest assessment before you sign protects you from a decision that could cost you <strong>everything you put in.</strong></p>
+      </div>
+
+    </div>
+    <div class="section-cta" data-rise>
+      <span class="cta-glow"><a class="cta cta--lg" onclick="fbq('track','Lead')" href="consult.html"><span class="l">Protect your money — book now</span><span class="arr">→</span></a></span>
     </div>
   </div>
 </section>
