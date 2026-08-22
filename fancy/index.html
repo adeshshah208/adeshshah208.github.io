@@ -315,6 +315,20 @@ input.err,select.err{border-color:#8E3417;background:#F8E3D9;
 var WHATSAPP_NUMBER = '918208264891';
 var SHEET_ENDPOINT  = 'https://script.google.com/macros/s/AKfycbzV29TRuld3lR0g4v5VgtQfd8PUCNlKN0bVXtL5rxvSRB-wom9dWiik9ueeHio2CelF/exec';
 
+// Ad attribution from the landing-page URL.
+// Example: https://aihaus.in/fancy/?ad=emi-notification
+var URL_PARAMS = new URLSearchParams(window.location.search);
+var AD_NAME = URL_PARAMS.get('ad') ||
+              URL_PARAMS.get('ad_name') ||
+              URL_PARAMS.get('utm_content') ||
+              'Unknown / direct';
+var CAMPAIGN_NAME = URL_PARAMS.get('campaign') ||
+                    URL_PARAMS.get('utm_campaign') ||
+                    '';
+var ADSET_NAME = URL_PARAMS.get('adset') ||
+                 URL_PARAMS.get('utm_term') ||
+                 '';
+
 (function () {
   var a = document.getElementById('nInt'), b = document.getElementById('nPri');
   if (!a || !b) return;
@@ -396,7 +410,16 @@ form.addEventListener('submit', function (e) {
     body: JSON.stringify({
       name: name, phone: phone, stage: stage,
       budget: document.getElementById('budget').value || 'Not stated',
-      source: 'lp-fancy', ts: new Date().toISOString()
+      // Keep `source` useful even if the Apps Script only stores the existing source field.
+      source: 'lp-fancy | ad: ' + AD_NAME,
+      ad_name: AD_NAME,
+      campaign_name: CAMPAIGN_NAME,
+      adset_name: ADSET_NAME,
+      utm_source: URL_PARAMS.get('utm_source') || '',
+      utm_medium: URL_PARAMS.get('utm_medium') || '',
+      fbclid: URL_PARAMS.get('fbclid') || '',
+      timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+      ts: new Date().toISOString()
     })
   }).catch(function () {}).then(function () {
     if (window.fbq) fbq('track', 'Lead', { content_name: 'consult-lp-fancy' });
