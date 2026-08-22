@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AIHaus — 60 minutes before you commit 240 months</title>
+<meta name="description" content="An independent home-buying advisory. Property curator, loan architect, life after home. Paid by you, never by a builder, broker or bank.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1728367251518555'); fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1728367251518555&ev=PageView&noscript=1"></noscript>
+
+<style>
+:root{
+  --mist:rgba(247,240,230,.74);
+  --whisper:rgba(247,240,230,.52);
+  --hair:rgba(247,240,230,.15);
+  --pad:clamp(22px,6vw,64px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:#3B2618}
+body{background:#3B2618;color:#F7F0E6;line-height:1.5;overflow-x:hidden;
+  font-family:'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif}
+.serif{font-family:'DM Serif Display',Georgia,'Times New Roman',serif;font-weight:400}
+.ital{font-family:'DM Serif Display',Georgia,serif;font-style:italic}
+
+section{min-height:100svh;position:relative;display:flex;flex-direction:column;
+  justify-content:center;
+  padding:calc(var(--pad) + env(safe-area-inset-top)) var(--pad)
+          calc(var(--pad) + env(safe-area-inset-bottom))}
+.s1{background:linear-gradient(165deg,#4C331F 0%,#3B2618 54%,#2E1D11 100%)}
+.s2{background:linear-gradient(165deg,#392414 0%,#281909 100%)}
+.s3{background:linear-gradient(165deg,#4E3421 0%,#3A2415 100%)}
+.s35{background:linear-gradient(165deg,#3D2718 0%,#2C1B0E 100%)}
+.s4{background:linear-gradient(165deg,#3B2618 0%,#251708 100%);padding-bottom:calc(var(--pad) * 1.6 + env(safe-area-inset-bottom))}
+.lever{margin-top:24px}
+.lever>div{padding:17px 0;border-bottom:1px solid var(--hair);display:flex;gap:16px;
+  align-items:baseline}
+.lever>div:first-child{border-top:1px solid var(--hair)}
+.lever b{font-size:clamp(14.5px,3.8vw,16.5px);font-weight:700;min-width:118px;flex:none;
+  letter-spacing:-.01em}
+.lever span{font-size:clamp(12.5px,3.2vw,14.5px);color:var(--mist);line-height:1.5}
+.lever-foot{margin-top:20px;font-size:clamp(14px,3.6vw,16px);color:var(--mist);
+  line-height:1.55;max-width:40ch}
+.wrap{width:100%;max-width:820px;margin:0 auto}
+.s1 h1{font-size:clamp(29px,7.4vw,48px);line-height:1.16;letter-spacing:-.012em;max-width:19ch}
+.s1 .beat{font-size:clamp(15.5px,4vw,18.5px);margin-top:18px}
+
+h1{font-size:clamp(40px,11vw,78px);line-height:1.06;letter-spacing:-.02em}
+h2{font-size:clamp(29px,7.6vw,54px);line-height:1.1;letter-spacing:-.018em}
+.eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.22em;color:var(--whisper);
+  text-transform:uppercase;margin-bottom:18px}
+.eyebrow.brand{text-transform:none;letter-spacing:-.01em;font-size:14px;font-weight:700;
+  color:#E3D5BC}
+.lede{font-size:clamp(15.5px,4vw,20px);line-height:1.6;color:var(--mist);max-width:36ch}
+.beat{font-size:clamp(16.5px,4.3vw,21px);line-height:1.56;margin-top:22px;max-width:32ch;
+  color:var(--mist)}
+.stress{font-weight:700;color:#F7F0E6}
+
+.cta{position:relative;display:inline-flex;align-items:center;gap:10px;margin-top:28px;
+  padding:17px 32px;border:0;border-radius:999px;cursor:pointer;font:inherit;
+  font-family:'Plus Jakarta Sans',Arial,sans-serif;
+  font-size:clamp(15px,3.9vw,17px);font-weight:700;letter-spacing:-.015em;color:#2A180C;
+  text-decoration:none;overflow:hidden;isolation:isolate;
+  background:linear-gradient(135deg,#FFFBF4 0%,#FFF8EE 44%,#F1DFC6 100%);
+  box-shadow:0 16px 40px rgba(18,8,2,.46),0 0 0 1px rgba(255,246,232,.55),
+             0 0 34px rgba(227,213,188,.26);
+  transition:transform .18s ease,box-shadow .18s ease}
+.cta:hover{transform:translateY(-2px);
+  box-shadow:0 22px 52px rgba(18,8,2,.54),0 0 0 1px rgba(255,246,232,.70),
+             0 0 46px rgba(227,213,188,.38)}
+.cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.cta::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.95) 47%,
+             rgba(240,229,209,.75) 55%,transparent 70%);
+  transform:translateX(-120%);
+  animation:sheen 4.2s cubic-bezier(.3,0,.2,1) infinite}
+@keyframes sheen{0%{transform:translateX(-120%)}44%{transform:translateX(120%)}
+  100%{transform:translateX(120%)}}
+.arw{font-size:1.05em;line-height:1}
+.cta-note{font-size:12.5px;color:var(--whisper);margin-top:11px}
+
+.alert{margin-top:32px;max-width:430px;border-radius:20px;padding:16px 18px;
+  display:flex;align-items:center;gap:14px;
+  background:linear-gradient(160deg,rgba(255,236,214,.24),rgba(255,236,214,.09));
+  border:1.5px solid rgba(255,238,216,.32);
+  box-shadow:0 26px 56px rgba(20,9,2,.52),inset 0 1.5px 0 rgba(255,240,220,.30);
+  -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.alert .ico{width:44px;height:44px;border-radius:13px;background:#FFF8EE;color:#3B2618;
+  flex:none;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:700}
+.alert .amt{font-size:clamp(18px,4.8vw,24px);font-weight:700;letter-spacing:-.022em;line-height:1.2}
+.alert .sub{font-size:clamp(12.5px,3.2vw,15px);color:rgba(247,240,230,.84);margin-top:2px}
+
+.meter{margin-top:30px;max-width:470px;padding:20px 22px 18px;border-radius:20px;
+  background:linear-gradient(160deg,rgba(255,236,214,.20),rgba(255,236,214,.06));
+  border:1.5px solid rgba(255,238,216,.28);
+  box-shadow:0 28px 60px rgba(20,9,2,.52),inset 0 1.5px 0 rgba(255,240,220,.28);
+  -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.meter-top{display:flex;justify-content:space-between;align-items:baseline}
+.meter-lab{font-size:10px;font-weight:700;letter-spacing:.2em;color:rgba(255,255,255,.62)}
+.meter-paid{font-size:11.5px;font-weight:600;color:rgba(255,255,255,.62);
+  font-variant-numeric:tabular-nums}
+.cols{display:flex;gap:18px;margin-top:16px}
+.col{flex:1;min-width:0}
+.big{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(30px,8vw,44px);line-height:1.04;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:#E3D5BC}
+.big.dim{color:rgba(247,240,230,.62)}
+.cap{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:rgba(255,255,255,.56);margin-top:6px;line-height:1.3}
+.split{display:flex;height:10px;border-radius:99px;overflow:hidden;margin-top:18px;
+  background:rgba(20,9,2,.40)}
+.seg{height:100%;width:0;transition:width 1.5s cubic-bezier(.2,.7,.3,1) .35s}
+.seg.int{background:linear-gradient(90deg,#C9B590,#E3D5BC);box-shadow:0 0 16px rgba(227,213,188,.50)}
+.seg.pri{background:rgba(247,240,230,.30)}
+.ledger{margin-top:26px;border-top:1px solid var(--hair)}
+.row{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:baseline;
+  padding:13px 0;border-bottom:1px solid var(--hair)}
+.row .yr{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--whisper);
+  font-variant-numeric:tabular-nums}
+.row .ev{font-size:clamp(15px,3.9vw,17.5px);line-height:1.35}
+.row .due{font-size:clamp(12px,3.1vw,14.5px);font-weight:700;white-space:nowrap;
+  font-variant-numeric:tabular-nums}
+.ledger-foot{margin-top:22px;font-size:clamp(22px,6vw,30px);line-height:1.24;font-weight:700;
+  letter-spacing:-.015em}
+
+.room{margin-top:24px;display:grid;gap:10px}
+.idx{font-family:'DM Serif Display',Georgia,serif;font-size:15px;color:#E3D5BC;flex:none;
+  min-width:26px;opacity:.9}
+.party{display:flex;align-items:baseline;gap:13px;padding:15px 16px;border-radius:13px;
+  background:rgba(28,14,4,.30);border:1px solid var(--hair)}
+.party .who{font-size:clamp(14.5px,3.9vw,17px);font-weight:700;min-width:74px;flex:none}
+.party .why{font-size:clamp(12.5px,3.2vw,14.5px);color:var(--mist);line-height:1.45}
+.us{margin-top:13px;padding:18px;border-radius:16px;color:#2A180C;
+  background:linear-gradient(135deg,#FFFBF4,#F3E4CE);box-shadow:0 20px 46px rgba(20,9,2,.44)}
+.us .who{font-size:clamp(15.5px,4.1vw,19px);font-weight:800;letter-spacing:-.02em}
+.us .why{font-size:clamp(12.5px,3.2vw,14.5px);color:rgba(42,24,12,.76);margin-top:5px;line-height:1.5}
+.svc{margin-top:20px;border-top:1px solid var(--hair)}
+.svc div{padding:11px 0;border-bottom:1px solid var(--hair);display:flex;gap:12px;align-items:baseline}
+.svc b{font-size:clamp(13px,3.5vw,15.5px);font-weight:700;min-width:122px;letter-spacing:-.01em}
+.svc span{font-size:clamp(12px,3.1vw,14.5px);color:var(--mist);line-height:1.45}
+
+form{margin-top:20px;display:grid;gap:11px}
+.lab{font-size:10.5px;font-weight:700;letter-spacing:.17em;color:var(--whisper);
+  text-transform:uppercase;margin-bottom:6px;display:block}
+input,select{width:100%;padding:15px 16px;border-radius:12px;font:inherit;font-size:16px;
+  font-family:'Plus Jakarta Sans',Arial,sans-serif;
+  background:#E9DDC6;border:1px solid rgba(59,38,24,.20);color:#2E1D10;
+  -webkit-appearance:none;appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%233B2618' stroke-opacity='.65' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center}
+input::placeholder{color:rgba(59,38,24,.46)}
+input:focus,select:focus{outline:2px solid #F7F0E6;outline-offset:2px;
+  border-color:transparent}
+input.err,select.err{border-color:#8E3417;background:#F8E3D9;
+  box-shadow:0 0 0 3px rgba(255,145,121,.30)}
+.lab.err{color:#FFB6A4}
+.cta-note.err{color:#FFB6A4;font-weight:600}
+.fee{display:flex;align-items:baseline;gap:12px;margin-top:18px;padding:14px 18px;
+  border-radius:14px;background:rgba(28,14,4,.32);border:1px solid var(--hair)}
+.fee-amt{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(26px,7vw,34px);
+  line-height:1;color:#E3D5BC;flex:none}
+.fee-txt{font-size:clamp(12.5px,3.2vw,14.5px);color:var(--mist);line-height:1.45}
+.cta.full{width:100%;justify-content:center;margin-top:6px;padding:18px 24px}
+.alt{margin-top:13px;text-align:center;font-size:14px;color:var(--mist)}
+.alt a{color:#E3D5BC;text-decoration:underline;text-underline-offset:3px}
+.done{display:none;padding:26px 22px;border-radius:18px;text-align:center;margin-top:18px;
+  color:#2A180C;background:linear-gradient(135deg,#FFFBF4,#F3E4CE)}
+.done h3{font-family:'DM Serif Display',Georgia,serif;font-size:27px;line-height:1.15;margin-bottom:8px}
+.done p{font-size:14.5px;color:rgba(42,24,12,.76);line-height:1.55}
+
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<section class="s1">
+  <div class="wrap">
+    <div class="eyebrow brand">aihaus.in</div>
+    <h1 class="serif">8 out of 10 first-time buyers don't know where their first EMI <span class="ital">goes.</span></h1>
+    <p class="beat">Most of it never touches the loan.</p>
+
+    <div class="meter">
+      <div class="meter-top">
+        <span class="meter-lab">YOUR FIRST EMI</span>
+        <span class="meter-paid">&#8377;40,000</span>
+      </div>
+      <div class="cols">
+        <div class="col">
+          <div class="big" id="nInt">&#8377;0</div>
+          <div class="cap">The bank's interest</div>
+        </div>
+        <div class="col">
+          <div class="big dim" id="nPri">&#8377;0</div>
+          <div class="cap">Towards the actual house</div>
+        </div>
+      </div>
+      <div class="split">
+        <div class="seg int" id="segInt"></div>
+        <div class="seg pri" id="segPri"></div>
+      </div>
+    </div>
+
+    <a class="cta" href="#book">Get a second opinion <span class="arw">&rarr;</span></a>
+    <div class="cta-note">One 60-minute call. No obligation to continue.</div>
+  </div>
+</section>
+
+<section class="s2">
+  <div class="wrap">
+    <div class="eyebrow">What you're signing</div>
+    <h2 class="serif">You're not buying a home.<br>You're buying <span class="ital">240 months.</span></h2>
+    <div class="ledger">
+      <div class="row"><span class="yr">YEAR 2</span><span class="ev">A wedding</span><span class="due">&#8377;40,000 due</span></div>
+      <div class="row"><span class="yr">YEAR 4</span><span class="ev">Your first child</span><span class="due">&#8377;40,000 due</span></div>
+      <div class="row"><span class="yr">YEAR 7</span><span class="ev">School admission</span><span class="due">&#8377;40,000 due</span></div>
+      <div class="row"><span class="yr">YEAR 11</span><span class="ev">A parent's hospital bill</span><span class="due">&#8377;40,000 due</span></div>
+      <div class="row"><span class="yr">YEAR 14</span><span class="ev">The job you can't leave</span><span class="due">&#8377;40,000 due</span></div>
+      <div class="row"><span class="yr">YEAR 18</span><span class="ev">College fees</span><span class="due">&#8377;40,000 due</span></div>
+    </div>
+    <p class="ledger-foot">Life negotiates.<br>The EMI doesn't.</p>
+    <a class="cta" href="#book">Stress-test my EMI <span class="arw">&rarr;</span></a>
+  </div>
+</section>
+
+<section class="s3">
+  <div class="wrap">
+    <div class="eyebrow">Why buyers overpay</div>
+    <h2 class="serif">Three people in the room.<br><span class="ital">None work for you.</span></h2>
+    <div class="room">
+      <div class="party"><span class="idx">01</span><span class="who">Builder</span><span class="why">Paid the day you sign.</span></div>
+      <div class="party"><span class="idx">02</span><span class="who">Broker</span><span class="why">Paid a share of what you spend.</span></div>
+      <div class="party"><span class="idx">03</span><span class="who">Bank</span><span class="why">Paid interest for 240 months.</span></div>
+    </div>
+    <div class="us">
+      <div class="who">AIHaus is the fourth chair.</div>
+      <div class="why"><b>&#8377;999, flat.</b> Paid only by you &mdash; never by them. Which is why we can tell you not to buy.</div>
+    </div>
+    <a class="cta" href="#book">Put someone on my side <span class="arw">&rarr;</span></a>
+  </div>
+</section>
+
+<section class="s35">
+  <div class="wrap">
+    <div class="eyebrow">What 60 minutes changes</div>
+    <h2 class="serif">We can't cut the price.<br>We cut <span class="ital">everything else.</span></h2>
+    <div class="lever">
+      <div><span class="idx">01</span><b>Tenure</b><span>Shorter term. Far less interest.</span></div>
+      <div><span class="idx">02</span><b>Price</b><span>Carpet area, floor rise, last sale.</span></div>
+      <div><span class="idx">03</span><b>Hidden costs</b><span>Stamp duty, GST, parking, deposits.</span></div>
+      <div><span class="idx">04</span><b>After</b><span>When to prepay. When to switch.</span></div>
+    </div>
+    <p class="lever-foot">Four numbers. We put all of them on the table.</p>
+    <a class="cta" href="#book">Show me my numbers <span class="arw">&rarr;</span></a>
+  </div>
+</section>
+
+<section class="s4" id="book">
+  <div class="wrap">
+    <div class="eyebrow">Before you commit</div>
+    <h2 class="serif">60 minutes with us,<br>before <span class="ital">240 months</span> with them.</h2>
+    <div class="fee"><span class="fee-amt">&#8377;999</span><span class="fee-txt">for the 60-minute consultation. No commission from anyone, ever.</span></div>
+    <p class="lede" style="margin-top:14px">Tell us where you are. We call you back.</p>
+
+    <form id="consult" novalidate>
+      <label><span class="lab">Your name</span>
+        <input id="name" type="text" autocomplete="name" placeholder="Full name"></label>
+      <label><span class="lab">Phone</span>
+        <input id="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number"></label>
+      <label><span class="lab">Where are you right now</span>
+        <select id="stage">
+          <option value="">Choose one</option>
+          <option>Just started looking</option>
+          <option>Shortlisted a project or two</option>
+          <option>Loan application in process</option>
+          <option>Already booked &mdash; need a second opinion</option>
+        </select></label>
+      <label><span class="lab">Budget</span>
+        <select id="budget">
+          <option value="">Prefer not to say</option>
+          <option>Under &#8377;50 lakh</option>
+          <option>&#8377;50 lakh &ndash; &#8377;75 lakh</option>
+          <option>&#8377;75 lakh &ndash; &#8377;1 crore</option>
+          <option>Above &#8377;1 crore</option>
+        </select></label>
+      <button class="cta full" type="submit" id="go">Book my call <span class="arw">&rarr;</span></button>
+      <p class="cta-note" id="msg" style="text-align:center">We never share your number. No obligation to continue.</p>
+    </form>
+
+    <div class="alt">or <a id="wa" href="#">message us on WhatsApp</a></div>
+
+    <div class="done" id="done">
+      <h3>We've got it.</h3>
+      <p>We'll call you within one working day. Keep an eye on your phone &mdash; it will be an unknown number.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+var WHATSAPP_NUMBER = '918208264891';
+var SHEET_ENDPOINT  = 'https://script.google.com/macros/s/AKfycbzV29TRuld3lR0g4v5VgtQfd8PUCNlKN0bVXtL5rxvSRB-wom9dWiik9ueeHio2CelF/exec';
+
+(function () {
+  var a = document.getElementById('nInt'), b = document.getElementById('nPri');
+  if (!a || !b) return;
+  var INT = 32812, PRI = 7188;
+  var fmt = function (n) { return '\u20B9' + Math.round(n).toLocaleString('en-IN'); };
+  var paint = function () {
+    document.getElementById('segInt').style.width = '82%';
+    document.getElementById('segPri').style.width = '18%';
+  };
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { a.textContent = fmt(INT); b.textContent = fmt(PRI); paint(); return; }
+  var t0 = null, dur = 1500;
+  function step(t) {
+    if (!t0) t0 = t;
+    var p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+    a.textContent = fmt(INT * e); b.textContent = fmt(PRI * e);
+    if (p < 1) requestAnimationFrame(step); else paint();
+  }
+  requestAnimationFrame(step);
+})();
+
+var wa = document.getElementById('wa');
+wa.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' +
+  encodeURIComponent("Hi AIHaus - I saw your ad. I'd like a second opinion before I buy.");
+wa.addEventListener('click', function (e) {
+  var href = this.href; e.preventDefault();
+  if (window.fbq) fbq('track', 'Contact');
+  setTimeout(function () { window.location.href = href; }, 250);
+});
+
+var form = document.getElementById('consult');
+var go = document.getElementById('go');
+var msg = document.getElementById('msg');
+
+function clearErr(el) {
+  el.classList.remove('err');
+  var lab = el.parentNode.querySelector('.lab');
+  if (lab) lab.classList.remove('err');
+}
+['name','phone','stage','budget'].forEach(function (id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  el.addEventListener('input', function () { clearErr(el); });
+  el.addEventListener('change', function () { clearErr(el); });
+});
+
+function flag(el, text) {
+  el.classList.add('err');
+  var lab = el.parentNode.querySelector('.lab');
+  if (lab) lab.classList.add('err');
+  msg.textContent = text;
+  msg.classList.add('err');
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  setTimeout(function () { el.focus({ preventScroll: true }); }, 260);
+}
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  var nameEl = document.getElementById('name');
+  var phoneEl = document.getElementById('phone');
+  var stageEl = document.getElementById('stage');
+  var name = nameEl.value.trim();
+  var phone = phoneEl.value.replace(/\D/g, '');
+  var stage = stageEl.value;
+
+  msg.classList.remove('err');
+  [nameEl, phoneEl, stageEl].forEach(clearErr);
+
+  if (name.length < 2) { flag(nameEl, 'Please add your name so we know who we are calling.'); return; }
+  if (phone.length !== 10) { flag(phoneEl, 'Please enter all 10 digits of your mobile number.'); return; }
+  if (!stage) { flag(stageEl, 'Pick where you are so the call is useful.'); return; }
+
+  go.disabled = true;
+  go.innerHTML = 'Sending...';
+
+  fetch(SHEET_ENDPOINT, {
+    method: 'POST', mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify({
+      name: name, phone: phone, stage: stage,
+      budget: document.getElementById('budget').value || 'Not stated',
+      source: 'lp-fancy', ts: new Date().toISOString()
+    })
+  }).catch(function () {}).then(function () {
+    if (window.fbq) fbq('track', 'Lead', { content_name: 'consult-lp-fancy' });
+    form.style.display = 'none';
+    document.querySelector('.alt').style.display = 'none';
+    document.getElementById('done').style.display = 'block';
+  });
+});
+</script>
+</body>
+</html>
