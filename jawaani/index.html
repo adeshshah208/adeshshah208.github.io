@@ -377,6 +377,14 @@ input.err,select.err{border-color:#A8321A;background:#FDF3F0}
       <label><span class="lab">Phone</span>
         <input id="phone" type="tel" inputmode="numeric" autocomplete="tel"
                placeholder="10-digit mobile number"></label>
+      <label><span class="lab">Buying in</span>
+        <select id="city">
+          <option value="">Choose one</option>
+          <option>Vasai - Virar</option>
+          <option>Mumbai</option>
+          <option>Thane</option>
+          <option>Other</option>
+        </select></label>
       <label><span class="lab">Where are you right now</span>
         <select id="stage">
           <option value="">Choose one</option>
@@ -452,7 +460,7 @@ var form=document.getElementById('consult'), go=document.getElementById('go'),
     msg=document.getElementById('msg');
 function clearErr(el){ el.classList.remove('err');
   var l=el.parentNode.querySelector('.lab'); if(l) l.classList.remove('err'); }
-['name','phone','stage','budget'].forEach(function(id){
+['name','phone','city','stage','budget'].forEach(function(id){
   var el=document.getElementById(id); if(!el) return;
   el.addEventListener('input',function(){clearErr(el)});
   el.addEventListener('change',function(){clearErr(el)}); });
@@ -465,16 +473,18 @@ function flag(el,text){ el.classList.add('err');
 form.addEventListener('submit', function(e){
   e.preventDefault();
   var nameEl=document.getElementById('name'), phoneEl=document.getElementById('phone'),
-      stageEl=document.getElementById('stage');
-  var name=nameEl.value.trim(), phone=phoneEl.value.replace(/\D/g,''), stage=stageEl.value;
-  msg.classList.remove('err'); [nameEl,phoneEl,stageEl].forEach(clearErr);
+      cityEl=document.getElementById('city'), stageEl=document.getElementById('stage');
+  var name=nameEl.value.trim(), phone=phoneEl.value.replace(/\D/g,''),
+      city=cityEl.value, stage=stageEl.value;
+  msg.classList.remove('err'); [nameEl,phoneEl,cityEl,stageEl].forEach(clearErr);
   if(name.length<2){ flag(nameEl,'Please add your name so we know who we are calling.'); return; }
   if(phone.length!==10){ flag(phoneEl,'Please enter all 10 digits of your mobile number.'); return; }
+  if(!city){ flag(cityEl,'Please choose where you are buying.'); return; }
   if(!stage){ flag(stageEl,'Pick where you are so the call is useful.'); return; }
   go.disabled=true; go.textContent='Sending...';
   fetch(SHEET_ENDPOINT,{method:'POST',mode:'no-cors',
     headers:{'Content-Type':'text/plain;charset=utf-8'},
-    body:JSON.stringify({name:name,phone:phone,stage:stage,
+    body:JSON.stringify({name:name,phone:phone,city:city,stage:stage,
       budget:document.getElementById('budget').value||'Not stated',
       source:'lp-jawaani',ts:new Date().toISOString()})
   }).catch(function(){}).then(function(){
