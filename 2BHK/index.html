@@ -29,7 +29,7 @@ src="https://www.facebook.com/tr?id=1728367251518555&ev=PageView&noscript=1"></n
   --gold:#A9761E;
   --gold-soft:#F5EBD6;
   --paper:#FFFFFF;
-  --pad:clamp(24px,6.4vw,72px);
+  --pad:clamp(20px,5.6vw,72px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--paper)}
@@ -84,16 +84,20 @@ h2{font-size:clamp(25px,6.2vw,40px);line-height:1.28;letter-spacing:-.016em;font
 .dark .cta-note{color:rgba(250,250,248,.6)}
 
 /* ---- 02 token receipt ---- */
-.slip{margin-top:26px;max-width:440px;border:1px solid var(--rule);background:#fff;
-  padding:22px 24px;box-shadow:0 16px 34px rgba(17,17,17,.08)}
+.slip{margin-top:26px;max-width:none;border:1px solid var(--rule);background:#fff;
+  padding:22px 22px 0;box-shadow:0 16px 34px rgba(17,17,17,.08)}
 .slip .hd{font-size:10px;font-weight:700;letter-spacing:.16em;color:var(--faint);
   padding-bottom:14px;border-bottom:2px solid var(--ink)}
-.slip .rw{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;
-  border-bottom:1px solid var(--rule)}
-.slip .rw:last-child{border-bottom:0}
-.slip .lb{font-size:13.5px;color:var(--faint)}
-.slip .vl{font-size:clamp(15px,4vw,18px);font-weight:700}
-.slip .vl.hot{color:var(--gold)}
+.slip .rw{padding:14px 0;border-bottom:1px solid var(--rule)}
+.slip .rw .lb{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.slip .rw .vl{display:block;font-size:clamp(17px,4.6vw,20px);font-weight:700}
+.slip-hero{margin:0 -22px;padding:22px;border-top:2px solid var(--ink);text-align:center;
+  background:#FBF9F4}
+.slip-hero .lb{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--faint)}
+.slip-hero .n{font-size:clamp(32px,9vw,44px);font-weight:700;color:var(--gold);
+  letter-spacing:-.02em;margin-top:6px}
 
 /* ---- 03 risk rows ---- */
 .risks{margin-top:24px;border-top:1px solid var(--rule)}
@@ -213,15 +217,11 @@ input.err,select.err{border-color:#A8321A;background:#FDF3F0}
       <div><span>04</span>Who is actually working for your savings</div>
       <div><span>05</span>Talk to us before you pay</div>
     </div>
-    <a class="cta" href="#calc">Show me what I could save</a>
-  </div>
-</section>
-
-<!-- ══ 02 · lost to the developer ══ -->
+    <a class="cta" href="#book">Save me lakhs</a>
 <section>
   <div class="wrap">
     <div class="step2">WHERE BUYERS LOSE MONEY<span>THE DEVELOPER</span></div>
-    <h2>You are probably paying for<br><em>space that does not exist.</em></h2>
+    <h2>You're paying for<br><em>space that isn't there.</em></h2>
     <div class="risks">
       <div class="rk"><span class="i">01</span><div><div class="t">Carpet area vs built-up area</div>
         <div class="d">The price is quoted on built-up. You live in the carpet area &mdash;
@@ -234,8 +234,16 @@ input.err,select.err{border-color:#A8321A;background:#FDF3F0}
         <div class="d">You cannot negotiate a price you have not benchmarked. Nobody in that
           office benchmarks it for you.</div></div></div>
     </div>
+    <div class="slip">
+      <div class="hd">NEGOTIATION IMPACT &nbsp;&#183;&nbsp; ILLUSTRATIVE 2 BHK</div>
+      <div class="rw"><span class="lb">Flat size (built-up)</span><span class="vl">~900 sq ft</span></div>
+      <div class="slip-hero">
+        <div class="lb">Just &#8377;1,000 / sq ft negotiated down, saves you</div>
+        <div class="n">&#8377;9,00,000</div>
+      </div>
+    </div>
     <p class="punch">On an &#8377;80 lakh flat, these alone are often worth several lakh rupees.</p>
-    <a class="cta" href="#calc">See the loan-side savings too</a>
+    <a class="cta" href="#book">Stop me overpaying</a>
   </div>
 </section>
 
@@ -253,7 +261,7 @@ input.err,select.err{border-color:#A8321A;background:#FDF3F0}
         <div class="d">Small extra payments early on save far more later.</div></div></div>
     </div>
     <p class="punch">This is the single biggest number on this page. See it for yourself below.</p>
-    <a class="cta" href="#calc">Calculate my savings</a>
+    <a class="cta" href="#book">Save me from this trap</a>
   </div>
 </section>
 
@@ -289,7 +297,7 @@ input.err,select.err{border-color:#A8321A;background:#FDF3F0}
           Loan at 80% of price, 7.5% illustrative rate.</div>
       </div>
     </div>
-    <a class="cta" href="#book">Book my 60 minutes</a>
+    <a class="cta" href="#book">Lock in these savings</a>
   </div>
 </section>
 
@@ -308,9 +316,8 @@ input.err,select.err{border-color:#A8321A;background:#FDF3F0}
       <div class="who us"><span class="i">04</span>
         <div><span class="n">AIHaus &mdash; paid to save you money.</span>
           <div class="d"><b>&#8377;999, flat.</b> The only way we earn more is if you
-            trust us with the next call. Not this one.</div></div></div>
     </div>
-    <a class="cta" href="#book">Book my 60 minutes</a>
+    <a class="cta" href="#book">Put someone on my side, now</a>
   </div>
 </section>
 
